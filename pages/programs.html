@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Program Filter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .filter-section {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        #searchBar, #categoryFilter {
+            padding: 8px;
+            font-size: 16px;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="filter-section">
+        <input type="text" id="searchBar" placeholder="Search programs...">
+        <select id="categoryFilter">
+            <option value="all">All Levels</option>
+            <option value="Beginner Friendly">Beginner Friendly</option>
+            <option value="Advanced">Advanced</option>
+        </select>
+    </section>
+
+    <div id="programsGrid" class="card-container">
+        <div class="card" data-level="Beginner Friendly">HTML Basics</div>
+        <div class="card" data-level="Advanced">Advanced JavaScript</div>
+        <div class="card" data-level="Beginner Friendly">CSS Fundamentals</div>
+    </div>
+
+</body>
+</html>
