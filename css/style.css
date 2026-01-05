@@ -170,6 +170,26 @@ nav a:hover {
 .card:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.card h4 {
+    margin-bottom: 10px;
+    color: var(--secondary-blue);
+}
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s var(--anim-curve), transform 0.8s var(--anim-curve);
+}
+
+.fade-in-up.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================
+   Why Section - Specific Styling
     border-color: var(--secondary-blue);
 }
 
@@ -200,10 +220,125 @@ footer::before {
     background: var(--white);
     clip-path: polygon(0 0, 5% 100%, 10% 0, 15% 100%, 20% 0, 25% 100%, 30% 0, 35% 100%, 40% 0, 45% 100%, 50% 0, 55% 100%, 60% 0, 65% 100%, 70% 0, 75% 100%, 80% 0, 85% 100%, 90% 0, 95% 100%, 100% 0);
 }
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active {
+        display: none;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--white);
+        padding: 20px 8%;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav.active .close-icon {
+        display: block;
+    }
+
+    nav a {
+        margin: 10px 0;
+        width: 100%;
+        font-size: 20px;
+        margin: 20px 0;
+    }
+
+    .profile-dropdown {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .profile-icon {
+        width: 100%;
+        border-radius: 6px;
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .profile-menu {
+        position: static;
+        box-shadow: none;
+        border: 1px solid #e0e0e0;
+        margin-top: 10px;
+        border-radius: 6px;
+    }
+
+    .hero {
+        padding: 60px 8%;
+    }
+    
+    .hero h2 {
+        font-size: 32px;
+    }
+    
+    .hero p {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 48px 8%;
+    }
+
+    section h3 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+    
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Hover effect to the cards */
+
+/* Base card style */
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: 
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  will-change: transform, box-shadow;
+}
+
+/* Hover interaction */
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
 
 /* =========================
    Animations
-========================= */
 .fade-in-up {
     opacity: 0;
     transform: translateY(30px);
