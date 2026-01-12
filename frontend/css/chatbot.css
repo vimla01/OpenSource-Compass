@@ -1,21 +1,21 @@
 /* Chatbot Styles */
 :root {
     --chat-primary: #4D96FF;
-    --chat-bg: #ffffff;
-    --chat-text: #333333;
+    --chat-bg: #fff;
+    --chat-text: #333;
     --chat-user-msg-bg: #4D96FF;
-    --chat-user-msg-text: #ffffff;
+    --chat-user-msg-text: #fff;
     --chat-bot-msg-bg: #f0f0f0;
-    --chat-bot-msg-text: #333333;
+    --chat-bot-msg-text: #333;
     --chat-width: 350px;
     --chat-height: 450px;
 }
 
 body.dark-mode {
     --chat-bg: #1e1e1e;
-    --chat-text: #ffffff;
+    --chat-text: #fff;
     --chat-bot-msg-bg: #2d2d2d;
-    --chat-bot-msg-text: #ffffff;
+    --chat-bot-msg-text: #fff;
 }
 
 /* Floating Chat Button */
@@ -30,7 +30,7 @@ body.dark-mode {
     border-radius: 50%;
     border: none;
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -53,19 +53,19 @@ body.dark-mode {
     height: var(--chat-height);
     background-color: var(--chat-bg);
     border-radius: 12px;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 25px rgb(0 0 0 / 20%);
     display: flex;
     flex-direction: column;
     overflow: hidden;
     z-index: 999;
-    opacity: 0;
+    opacity: 0%;
     transform: translateY(20px);
     pointer-events: none;
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .chat-window.active {
-    opacity: 1;
+    opacity: 100%;
     transform: translateY(0);
     pointer-events: all;
 }
@@ -105,7 +105,7 @@ body.dark-mode {
     border-radius: 18px;
     font-size: 14px;
     line-height: 1.4;
-    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .message.bot {
@@ -125,13 +125,13 @@ body.dark-mode {
 /* Chat Input Area */
 .chat-input-area {
     padding: 15px;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgb(0 0 0 / 10%);
     display: flex;
     gap: 10px;
 }
 
 body.dark-mode .chat-input-area {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgb(255 255 255 / 10%);
 }
 
 .chat-input-area input {
