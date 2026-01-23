@@ -3,7 +3,7 @@
 # 🌍 OpenSource Compass  
 ### Navigate Your Open Source Journey with Confidence
 
-<div align="center">
+<img src="frontend/library/assets/swoc_banner.png" alt="OpenSource Compass – SWOC'26 Banner" width="40%" />
 
 [![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/sayeeg-11/OpenSource-Compass)
 [![GitHub Issues](https://img.shields.io/github/issues/sayeeg-11/OpenSource-Compass)](https://github.com/sayeeg-11/OpenSource-Compass/issues)
@@ -82,34 +82,122 @@ No jargon. No confusion. Just clear steps to help you start contributing with co
 ## 📂 Project Structure
 <div align="left">
 
-```text
-OpenSource-Compass/
-├── .github/             # GitHub templates and CI/CD workflows
-├── backend/             # Node.js server and database models
-├── frontend/            # Client-side assets and UI components
-│   ├── library/         # Reusable logos and PDFs
-│   └── pages/           # Project HTML templates
-├── home.html            # Entry point for GitHub Pages
-└── README.md            # Project documentation
+
+
 ```
-
-</div>
-
-### System Architecture
-  
-```mermaid
-graph TD
-    User((User)) -->|Interacts| Frontend[Frontend: HTML/CSS/JS]
-    Frontend -->|Requests Data| Backend[Backend: Node + Express]
-    Backend -->|Queries| DB[(Database: User Info)]
-    Frontend -->|Reads| JSON[Static JSON Data: Programs/Bot]
-    Frontend -->|Downloads| Assets[Library: PDF Guides]
-    
-    subgraph Core Features
-        Frontend --> Auth[Authentication System]
-        Frontend --> Bot[Chatbot Assistance]
-        Frontend --> Roadmap[OS Roadmaps]
-    end
+OPENSOURCE-COMPASS/
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── bug_report.yml
+│   │   ├── documentation_update.yml
+│   │   ├── feature_request.yml
+│   │   ├── guide_proposal.yml
+│   │   └── program_addition.yml
+│   ├── workflows/
+│   │   ├── issue-auto-comment.yml
+│   │   ├── jekyll-gh-pages.yml
+│   │   ├── pr-review.yml
+│   │   └── static.yml
+│   └── PULL_REQUEST_TEMPLATE.md
+├── .vscode/
+│   └── settings.json
+├── backend/
+│   ├── config/
+│   │   └── db.js
+│   ├── controllers/
+│   │   ├── authController.js
+│   │   └── contributorProgressController.js
+│   ├── middleware/
+│   │   └── authMiddleware.js
+│   ├── models/
+│   │   └── User.js
+│   ├── routes/
+│   │   ├── authRoutes.js
+│   │   └── contributorProgressRoutes.js
+│   ├── .gitignore
+│   ├── package-lock.json
+│   ├── package.json
+│   └── server.js
+├── frontend/
+│   ├── assets/templates/
+│   │   ├── contributing.md
+│   │   ├── issue-template.md
+│   │   ├── pr-template.md
+│   │   └── readme.md
+│   ├── css/
+│   │   ├── auth.css
+│   │   ├── beginners-guide.css
+│   │   ├── chatbot.css
+│   │   ├── contribute.css
+│   │   ├── contributors.css
+│   │   ├── guides.css
+│   │   ├── home.css
+│   │   ├── navigation.css
+│   │   ├── pdf_guide.css
+│   │   ├── program.css
+│   │   ├── resources.css
+│   │   ├── sitemap.css
+│   │   └── style.css
+│   ├── data/
+│   │   ├── chatbot_data.json
+│   │   ├── programs.json
+│   │   └── quiz_data.json
+│   ├── js/
+│   │   ├── auth.js
+│   │   ├── chatbot.js
+│   │   ├── components.js
+│   │   ├── contribute.js
+│   │   ├── contributors.js
+│   │   ├── guides.js
+│   │   ├── home.js
+│   │   ├── main.js
+│   │   ├── profile.js
+│   │   ├── profile2.js
+│   │   ├── programs-page.js
+│   │   ├── programs.js
+│   │   ├── resources.js
+│   │   ├── search.js
+│   │   ├── sitemap.js
+│   │   └── theme.js
+│   ├── library/
+│   │   ├── assets/
+│   │   └── guides_pdf/
+│   │       ├── GSoC.pdf
+│   │       ├── GSSOC.pdf
+│   │       ├── Hacktoberfest.pdf
+│   │       ├── LFX Mentorship.pdf
+│   │       ├── Outreachy.pdf
+│   │       └── SSoC.pdf
+│   ├── pages/
+│   │   ├── Event/
+│   │   │   ├── gsoc.html
+│   │   │   ├── gssoc.html
+│   │   │   ├── hacktober.html
+│   │   │   ├── linux.html
+│   │   │   ├── outreachy.html
+│   │   │   └── ssoc.html
+│   │   └── guides/
+│   │       ├── ethics-licensing.html
+│   │       ├── Contribute.html
+│   │       ├── contributors.html
+│   │       ├── faq.html
+│   │       ├── glossary.html
+│   │       ├── guides.html
+│   │       ├── pdf_guide.html
+│   │       ├── profile.html
+│   │       ├── programs.html
+│   │       ├── Resources.html
+│   │       └── sitemap.html
+│   └── node_modules/
+├── public/
+├── .stylelintrc.json
+├── 404.html
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── index.html
+├── LICENSE
+├── package-lock.json
+└── README.md
 ```
 
 ---
